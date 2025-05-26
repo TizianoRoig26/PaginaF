@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurismoMDZ</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='estilop.css') }}">
+
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+
+         <a href="{{ url_for('index') }}" id="LogoLink">
+           <img id="LogoImagen" src="{{ url_for('static', filename='img/logo.svg') }}" alt="Logo">
+                </a>
+            <img id="Logoletras" src="{{ url_for('static', filename='img/Logoletras.svg') }}" alt="Logoletras">
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Principal</a></li>
+                    <li><a href="{{ url_for('tierra') }}">Tierra</a></li>
+                    <li><a href="{{ url_for('agua') }}">Agua</a></li>
+                    <li><a href="{{ url_for('aire') }}">Aire</a></li>
+                    <li><a href="{{ url_for('reservas') }}">Reservas</a></li>
+                    <li><a href="{{ url_for('login') }}"><button>Iniciar sesión</button></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1> Recorre Mendoza por Tierra </h1>
+    <h2> Recorre los paisajes mendocinos en 4x4, explorando montañas, viñedos y rutas rurales. </h2>
+    <div class="secciones">
+        <a href="{{ url_for('formulario') }}" class="seccion-link">
+            <section id="4x4" class="seccion">
+                <h2>Travesía en 4x4 por la Cordillera</h2>
+                <p>Explora caminos de altura con vistas panorámicas del Aconcagua y la precordillera.</p>
+                <img src="{{ url_for('static', filename='img/tierra1.jpg') }}" alt="Tierra">
+            </section>
+        </a>
+    
+        <a href="{{ url_for('formulario') }}" class="seccion-link">
+            <section id="cabalgata" class="seccion">
+                <h2>Cabalgatas entre viñedos</h2>
+                <p>Explora caminos de altura con vistas panorámicas del Aconcagua y la precordillera.</p>
+                <img src="https://th.bing.com/th/id/OIP.taoWnb0sInvdu91uyYifFAHaE7?rs=1&pid=ImgDetMain" alt="Agua">
+            </section>
+        </a>
+    
+        <a href="{{ url_for('formulario') }}" class="seccion-link">
+            <section id="Trekking" class="seccion">
+                <h2>Trekking en el Parque Aconcagua</h2>
+                <p>ventúrate por senderos de montaña y descubre la majestuosidad del cerro más alto de América.</p>
+                <img src="https://www.civitatis.com/f/argentina/mendoza/galeria/ruta-trekking-aconcagua.jpg" alt="Aire">
+            </section>
+        </a>
+    </div>
+</body>
+</html>

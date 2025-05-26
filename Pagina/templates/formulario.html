@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurismoMDZ</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='estilop.css') }}">
+
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+        <a href="{{ url_for('index') }}" id="LogoLink">
+           <img id="LogoImagen" src="{{ url_for('static', filename='img/logo.svg') }}" alt="Logo">
+                </a>
+            <img id="Logoletras" src="{{ url_for('static', filename='img/Logoletras.svg') }}" alt="Logoletras">
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Principal</a></li>
+                    <li><a href="{{ url_for('tierra') }}">Tierra</a></li>
+                    <li><a href="{{ url_for('agua') }}">Agua</a></li>
+                    <li><a href="{{ url_for('aire') }}">Aire</a></li>
+                    <li><a href="{{ url_for('reservas') }}">Reservas</a></li>
+                    <li><a href="{{ url_for('login') }}"><button>Iniciar sesión</button></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h2>Reserva tu experiencia en Mendoza</h2>
+    <div id="formulario">
+    <form action="{{ url_for('formulario') }}" method="POST">
+    <div id="nombre">
+        <label for="nombre">Nombre/s:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>    
+    </div>
+    <div id="apellido">
+        <label for="apellido">Apellido/s:</label>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+    </div>
+    
+    <div id="correo">
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required><br><br>
+    </div>
+
+    <div id="telefono">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required><br><br>
+    </div>
+
+    <label for="actividad">Selecciona una actividad:</label>
+    <select id="actividad" name="actividad" required>
+        <option value=""> </option>
+        <option value="Cabalgata">Cabalgata</option>
+        <option value="Travesía 4x4">Travesía 4x4</option>
+        <option value="Trekking">Trekking</option>
+    </select><br><br>
+
+    <div id="fecha">
+        <label for="fecha_reserva">Fecha de Reserva:</label>
+        <input type="date" id="fecha_reserva" name="fecha_reserva" required><br><br>
+    </div>
+
+    <div id="cantpersonas">
+        <label for="cantidad_personas">Cantidad de Personas:</label><br>
+        <input type="number" id="cantidad_personas" name="cantidad_personas" min="1" required><br><br>
+    </div>  
+
+    <div id="comentarios">
+        <label for="comentarios">Comentarios Adicionales:</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea><br><br>
+    </div>      
+
+    <button type="submit" id="boton">Reservar</button>
+</form>
+
+</div>
+<script src="formScript.js"></script>
+</body>
+</html>

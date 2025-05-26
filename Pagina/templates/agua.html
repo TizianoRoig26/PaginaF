@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TurismoMDZ</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='estilop.css') }}">
+
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+        
+     <a href="{{ url_for('index') }}" id="LogoLink">
+           <img id="LogoImagen" src="{{ url_for('static', filename='img/logo.svg') }}" alt="Logo">
+                </a>
+            <img id="Logoletras" src="{{ url_for('static', filename='img/Logoletras.svg') }}" alt="Logoletras">
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Principal</a></li>
+                    <li><a href="{{ url_for('tierra') }}">Tierra</a></li>
+                    <li><a href="{{ url_for('agua') }}">Agua</a></li>
+                    <li><a href="{{ url_for('aire') }}">Aire</a></li>
+                    <li><a href="{{ url_for('reservas') }}">Reservas</a></li>
+                    <li><a href="{{ url_for('login') }}"><button>Iniciar sesión</button></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1> Agua </h1>
+    <h2> Actividades te permitirán disfrutar de la belleza natural de Mendoza mientras vives experiencias emocionantes y relajantes en el agua. </h2>
+    <section id="Agua">
+        <h2>Experiencias en Mendoza</h2>
+        <p>Disfruta de Aguas Rapidas, Termales y Tranquilas con increibles paisajes.</p>
+        <div class="Experiencias">
+            <a href="{{ url_for('formulario') }}" class="seccion-link">
+                <section id="rafting" class="seccion">
+                    <h2>Rafting en el Río Mendoza</h2>
+                    <p>Disfruta de la adrenalina descendiendo por los rápidos del Río Mendoza.</p>
+                    <img src="{{ url_for('static', filename='img/7.jpg') }}" alt="Rafting">
+                </section>
+            </a>
+           <a href="{{ url_for('formulario') }}" class="seccion-link">
+                <section id="termas-cacheuta" class="seccion">
+                    <h2>Termas de Cacheuta</h2>
+                    <p>Relájate en piscinas termales naturales enclavadas en la montaña.</p>
+                    <img src="{{ url_for('static', filename='img/5.jpg') }}" alt="Termas de Cacheuta">
+                </section>
+            </a>
+            <a href="{{ url_for('formulario') }}" class="seccion-link">
+                <section id="kayak-potrerillos" class="seccion">
+                    <h2>Kayak en el Embalse de Potrerillos</h2>
+                    <p>Navega las tranquilas aguas del embalse rodeado de montañas, ideal para quienes buscan una experiencia relajante.</p>
+                    <img src="{{ url_for('static', filename='img/6.jpg') }}" alt="Kayak en el Embalse de Potrerillos">
+                </section>
+            </a>
+        </div>
+    </section>
+</body>
+</html>

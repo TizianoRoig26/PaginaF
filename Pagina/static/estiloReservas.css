@@ -1,0 +1,99 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(200, 210, 173);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilos del encabezado */
+.header {
+    background-color: rgb(173, 193, 120);
+    padding: 20px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: black;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgb(218, 164, 122);
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgb(47, 47, 47);
+}
+
+th {
+    background-color: rgb(47, 47, 47);
+    color: white;
+    font-size: 18px;
+}
+
+td {
+    background-color: rgb(240, 240, 240);
+    color: rgb(47, 47, 47);
+    font-size: 16px;
+}
+
+/* Colores alternados en las filas */
+tr:nth-child(even) td {
+    background-color: rgb(210, 210, 210);
+}
+
+/* Estilo de los enlaces de la tabla */
+a {
+    text-decoration: none;
+    color: rgb(210, 34, 34);
+}
+
+a:hover {
+    color: white;
+}
+
+/* Imágenes en la cabecera */
+.header img {
+    width: 50px;
+    height: auto;
+}

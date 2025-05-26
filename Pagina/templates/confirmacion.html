@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurismoMDZ</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='estilop.css') }}">
+
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+        
+          <a href="{{ url_for('index') }}" id="LogoLink">
+           <img id="LogoImagen" src="{{ url_for('static', filename='img/logo.svg') }}" alt="Logo">
+                </a>
+            <img id="Logoletras" src="{{ url_for('static', filename='img/Logoletras.svg') }}" alt="Logoletras">
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Principal</a></li>
+                    <li><a href="{{ url_for('tierra') }}">Tierra</a></li>
+                    <li><a href="{{ url_for('agua') }}">Agua</a></li>
+                    <li><a href="{{ url_for('aire') }}">Aire</a></li>
+                    <li><a href="{{ url_for('reservas') }}">Reservas</a></li>
+                    <li><a href="{{ url_for('login') }}"><button>Iniciar sesión</button></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <h1>¡Su Reserva fue confirmada!</h1>
+</body>
+</html>

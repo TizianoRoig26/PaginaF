@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurismoMDZ</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='estilop.css') }}">
+
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+        
+                <a href="{{ url_for('index') }}" id="LogoLink">
+           <img id="LogoImagen" src="{{ url_for('static', filename='img/logo.svg') }}" alt="Logo">
+                </a>
+            <img id="Logoletras" src="{{ url_for('static', filename='img/Logoletras.svg') }}" alt="Logoletras">
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Principal</a></li>
+                    <li><a href="{{ url_for('tierra') }}">Tierra</a></li>
+                    <li><a href="{{ url_for('agua') }}">Agua</a></li>
+                    <li><a href="{{ url_for('aire') }}">Aire</a></li>
+                    <li><a href="{{ url_for('reservas') }}">Reservas</a></li>
+                    <li><a href="{{ url_for('login') }}"><button class="INS">Iniciar sesión</button></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <h1>Explora Mendoza</h1>
+    
+    <div class="secciones">
+        <a href="{{ url_for('tierra') }}" class="seccion-link">
+            <section id="tierra" class="seccion">
+                <h2>Tierra</h2>
+                <p>Recorre los paisajes mendocinos en 4x4, explorando montañas, viñedos y rutas rurales.</p>
+                <img src="{{ url_for('static', filename='img/3.jpg') }}" alt="Tierra">
+            </section>
+        </a>
+    
+        <a href="{{ url_for('agua') }}" class="seccion-link">
+            <section id="agua" class="seccion">
+                <h2>Agua</h2>
+                <p>Disfruta de actividades acuáticas como rafting, kayak y stand-up paddle.</p>
+                <img src="{{ url_for('static', filename='img/2.jpg') }}" alt="Agua">
+            </section>
+        </a>
+    
+        <a href="{{ url_for('aire') }}" class="seccion-link">
+            <section id="aire" class="seccion">
+                <h2>Aire</h2>
+                <p>Vive la adrenalina del parapente, globos aerostáticos y tirolesa en la montaña.</p>
+                <img src="{{ url_for('static', filename='img/1.jpg') }}" alt="Aire">
+            </section>
+        </a>
+    </div>
+    
+</body>
+</html>
